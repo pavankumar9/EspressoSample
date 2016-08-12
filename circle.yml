@@ -9,11 +9,9 @@ test:
   override:
       - sudo apt-get update
       - sudo apt-get install npm
-      - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/linuxbrew/go/install)"
-      - brew
-      - sudo apt-get install build-essential
-      - brew install node
-      - npm install -g appium
-      - npm install wd
+      - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash 
+      - sudo npm install -g appium
+      - appium:
+            background : true
+      - sleep 10
       - locate appium
-      - appium
