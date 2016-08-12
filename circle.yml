@@ -7,6 +7,7 @@ machine:
 
 test:
   override:
+      - sudo apt-get install build-essential curl git python-setuptools ruby
       - ruby -e "$(wget -O- https://raw.github.com/Homebrew/linuxbrew/go/install)"
       - export PATH="$HOME/.linuxbrew/bin:$PATH"
       - export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
