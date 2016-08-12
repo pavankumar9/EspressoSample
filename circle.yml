@@ -5,9 +5,7 @@ machine:
     ADB_INSTALL_TIMEOUT: "10"
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'
 
-dependencies:
-  pre:
-    - brew install appium
-    - appium
-        background: true
-    - sleep 40
+test:
+  override:
+      - brew install appium
+      - sleep 40
