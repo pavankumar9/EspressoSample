@@ -7,5 +7,13 @@ machine:
 
 test:
   override:
-      - brew install appium
-      - sleep 40
+      - sudo apt-get update
+      - sudo apt-get install npm
+      - ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/linuxbrew/go/install)”
+      - brew
+      - sudo apt-get install build-essential
+      - brew install node
+      - npm install -g appium
+      - npm install wd
+      - locate appium
+      - appium
