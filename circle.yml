@@ -9,6 +9,7 @@ test:
   override:
       - curl -O https://nodejs.org/download/release/node-v0.6.9.tar.gz
       - tar vxf node-v0.6.9.tar.gz
+      - ls `pwd`/node-v0.6.9/bin
       - cd `pwd`/node-v0.6.9/;sudo ./configure;sudo make install
       - export PATH=$PATH:`pwd`/node-v0.6.9/bin
       - ls -al `pwd`/node-v0.6.9/bin
