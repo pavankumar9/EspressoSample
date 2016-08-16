@@ -13,6 +13,5 @@ test:
       - echo y | /home/ubuntu/.linuxbrew/bin/brew update
       - echo y | /home/ubuntu/.linuxbrew/bin/brew install node
       - echo y | /home/ubuntu/.linuxbrew/bin/brew link node
-      - echo y | npm install -g appium
       - echo y | npm install wd
 
