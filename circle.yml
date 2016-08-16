@@ -11,3 +11,6 @@ test:
       - tar vxf node-v0.6.9.tar.gz
       - cd `pwd`/node-v0.6.9/;./configure;make install
       - export PATH=$PATH:`pwd`/node-v0.6.9/bin
+      - ls -al `pwd`/node-v0.6.9/bin
+      - appium
+      - `pwd`/node-v0.6.9/bin/appium 
