@@ -17,6 +17,7 @@ test:
       - sudo apt-get remove nodejs
       - sudo apt-get remove npm
       - wget "https://nodejs.org/download/release/node-v0.6.9.tar.gz"
+      - ls -al
       - tar -xvf node-v0.6.9.tar.gz
       - ls -al 
       - #echo y | npm install -g appium
