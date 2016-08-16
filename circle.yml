@@ -11,7 +11,7 @@ test:
       - echo y | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
       - sudo apt-get install build-essential
       - echo y | /home/ubuntu/.linuxbrew/bin/brew update
-      - echo y | /home/ubuntu/.linuxbrew/bin/brew install node
-      - echo y | /home/ubuntu/.linuxbrew/bin/brew link node
+      - echo y | echo y | echo y | echo y | /home/ubuntu/.linuxbrew/bin/brew install node
+      - echo y | echo y | echo y | echo y | /home/ubuntu/.linuxbrew/bin/brew link node
       - echo y | npm install wd
 
