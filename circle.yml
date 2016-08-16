@@ -9,7 +9,7 @@ dependencies:
   pre:
       - sudo apt-get update
       - sudo sed -i 's/us-east-1\.ec2\.//g' /etc/apt/sources.list
-      - sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
+      - sudo apt-get install ruby
       - echo y | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
       - export PATH="$HOME/.linuxbrew/bin:$PATH"
       - export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
