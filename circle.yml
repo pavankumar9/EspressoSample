@@ -5,12 +5,6 @@ machine:
     ADB_INSTALL_TIMEOUT: "10"
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'
     
-    
-dependencies:
-  pre:
-    - (brew update || brew update)
-    - (brew upgrade xctool || true)
-
 test:
   override:
       - sudo apt-get update
@@ -19,7 +13,7 @@ test:
       - echo y | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
       - sudo apt-get install build-essential
       - cd "$(/home/ubuntu/.linuxbrew/bin/brew --repository)" && git fetch && git reset --hard origin/master
-      - /home/ubuntu/.linuxbrew/bin/brew update
+      - /home/ubuntu/.linuxbrew/bin/brew upgrade
       - /home/ubuntu/.linuxbrew/bin/brew install node
       - /home/ubuntu/.linuxbrew/bin/brew link node
       - npm install -g appium
