@@ -9,7 +9,7 @@ dependencies:
   pre:
       - sudo apt-get update
       - sudo sed -i 's/us-east-1\.ec2\.//g' /etc/apt/sources.list
-      - sudo apt-get install ruby
+      - sudo apt-get install ruby git
       - echo y | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
       - sudo apt-get install build-essential
       - /home/ubuntu/.linuxbrew/bin/brew update
