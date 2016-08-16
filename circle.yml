@@ -10,6 +10,7 @@ test:
       - sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
       - echo y | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
       - sudo apt-get install build-essential
+      - echo y | /home/ubuntu/.linuxbrew/bin/brew update git
       - echo y | /home/ubuntu/.linuxbrew/bin/brew update
       - echo y | echo y | echo y | echo y | /home/ubuntu/.linuxbrew/bin/brew install node
       - echo y | echo y | echo y | echo y | /home/ubuntu/.linuxbrew/bin/brew link node
