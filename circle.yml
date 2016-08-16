@@ -7,13 +7,9 @@ machine:
 
 dependencies:
   pre:
-      - #curl -O https://nodejs.org/download/release/node-v0.6.9.tar.gz
-      - #tar vxf node-v0.6.9.tar.gz
-      - #cd node-v0.6.9/; ./configure ; sudo make install
-      - #appium
       - curl -O  https://github.com/appium/appium/archive/v1.4.16.tar.gz
       - tar vxf v1.4.16.tar.gz
       - rm appium-1.4.16.tar.gz
       - mv -f appium-1.4.16 appium
       - ls -al appium
-      - cd appium; ./reset.sh —android  --verbose
+      - cd appium; ./reset.sh -android --verbose
