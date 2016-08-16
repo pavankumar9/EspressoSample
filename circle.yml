@@ -11,8 +11,8 @@ test:
       - echo y | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
       - sudo apt-get install build-essential
       - /home/ubuntu/.linuxbrew/bin/brew update
-      - /home/ubuntu/.linuxbrew/bin/brew install node
-      - /home/ubuntu/.linuxbrew/bin/brew link node
-      - npm install -g appium
-      - npm install wd
+      - echo y | /home/ubuntu/.linuxbrew/bin/brew install node
+      - echo y | /home/ubuntu/.linuxbrew/bin/brew link node
+      - echo y | npm install -g appium
+      - echo y | npm install wd
 
