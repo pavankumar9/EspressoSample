@@ -9,17 +9,4 @@ test:
   override:
       - sudo apt-get install build-essential curl git python-setuptools ruby
       - echo y | ruby -e "$(wget -O- https://raw.github.com/Homebrew/linuxbrew/go/install)"
-      - export PATH="/home/ubuntu/.linuxbrew/bin:$PATH"
-      - echo y | /home/ubuntu/.linuxbrew/bin/brew update
-      - echo y | /home/ubuntu/.linuxbrew/bin/brew install node
-      - echo y | /home/ubuntu/.linuxbrew/bin/brew link node
-      - sudo apt-get remove nodejs
-      - sudo apt-get remove npm
-      - #wget "https://nodejs.org/download/release/node-v0.6.9.tar.gz"
-      - #ls -al
-      - #tar -xvf node-v0.6.9.tar.gz
-      - #ls -al 
-      - #echo y | npm install -g appium
-      - #echo y | npm install wd
-      - #locate appium
 
