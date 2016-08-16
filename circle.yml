@@ -12,6 +12,7 @@ dependencies:
       - sudo apt-get install ruby git
       - echo y | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
       - sudo apt-get install build-essential
+      - cd "$(brew --repository)" && git fetch && git reset --hard origin/master
       - /home/ubuntu/.linuxbrew/bin/brew update
       - /home/ubuntu/.linuxbrew/bin/brew install node
       - /home/ubuntu/.linuxbrew/bin/brew link node
