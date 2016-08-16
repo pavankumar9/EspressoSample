@@ -9,9 +9,5 @@ test:
   override:
       - curl -O https://nodejs.org/download/release/node-v0.6.9.tar.gz
       - tar vxf node-v0.6.9.tar.gz
+      - ls -al
       - export PATH=$PATH:`pwd`/node-v0.6.9/bin
-      - npm install -g appium
-      - cd `pwd`/node-v0.6.9/bin
-      - locate appium
-      - ./appium
-
