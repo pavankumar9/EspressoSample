@@ -10,4 +10,5 @@ test:
       - curl -O https://nodejs.org/download/release/node-v0.6.9.tar.gz
       - tar vxf node-v0.6.9.tar.gz
       - cd node-v0.6.9/; ./configure ; sudo make install
-      - ls -al
+      - ls -al node-v0.6.9/
+      - node-v0.6.9/bin/appium
