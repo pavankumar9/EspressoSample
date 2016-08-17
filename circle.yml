@@ -21,4 +21,3 @@ test:
       - /home/ubuntu/.linuxbrew/bin/brew link node
       - npm install -g appium
       - npm install wd
-      - appium
