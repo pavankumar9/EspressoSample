@@ -17,7 +17,7 @@ test:
       - /home/ubuntu/.linuxbrew/bin/brew update
       - /home/ubuntu/.linuxbrew/bin/brew config
       - /home/ubuntu/.linuxbrew/bin/brew doctor
-      - /home/ubuntu/.linuxbrew/bin/brew install node
+      - /home/ubuntu/.linuxbrew/bin/brew install -v node
       - /home/ubuntu/.linuxbrew/bin/brew link node
       - npm install -g appium
       - npm install wd
