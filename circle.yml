@@ -19,6 +19,10 @@ test:
       #/home/ubuntu/.linuxbrew/bin/brew doctor
       - /home/ubuntu/.linuxbrew/bin/brew install -v node
       - /home/ubuntu/.linuxbrew/bin/brew link node
-      - npm install -g appium
-      - npm install wd
-      - appium
+      - sudo apt-get remove nodejs
+      - sudo apt-get remove npm
+      - wget "https://nodejs.org/download/release/node-v0.6.9.tar.gz"
+      - ls -al
+      - tar -xvf node-v0.6.9.tar.gz
+      - ls -al node-v0.6.9
+      - echo y | npm install -g appium
