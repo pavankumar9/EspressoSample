@@ -26,3 +26,7 @@ test:
       - tar -xvf node-v0.6.9.tar.gz
       - ls -al node-v0.6.9
       - export PATH=$PATH:`pwd`/node-v0.6.9/bin ; sudo npm install -g appium ; appium
+      - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+      - sudo npm install -g appium
+      - which appium ; locate appium
+      - appium
