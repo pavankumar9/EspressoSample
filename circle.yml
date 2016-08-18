@@ -12,6 +12,7 @@ test:
       - sudo apt-get install build-essential curl git python-setuptools ruby perl
       - echo y | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
       - sudo apt-get install build-essential
+      - ls -al /home/ubuntu/.npm/appium/1.5.3
       - cd "$(/home/ubuntu/.linuxbrew/bin/brew --repository)" && git fetch && git reset --hard origin/master
       - /home/ubuntu/.linuxbrew/bin/brew update
       - /home/ubuntu/.linuxbrew/bin/brew update
