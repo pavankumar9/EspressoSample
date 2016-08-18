@@ -6,20 +6,18 @@ machine:
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'
     
     dependencies:
-  pre:
-    - ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | android update sdk --no-ui --all --filter "tools,platform-tools,android-23,extra-google-m2repository,extra-android-m2repository,extra-android-support"
-    - echo y | android update sdk --no-ui --all --filter "build-tools-23.0.3"
-    - npm install -g appium@1.4.13
-    - appium:
-          background: true
+        pre:
+            - ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | android update sdk --no-ui --all --filter "tools,platform-tools,android-23,extra-google-m2repository,extra-android-m2repository,extra-android-support"
+            - echo y | android update sdk --no-ui --all --filter "build-tools-23.0.3"
+            - npm install -g appium@1.4.13
+            - appium:
+                  background: true
+             - emulator -avd circleci-android22 -no-audio -no-window:
+                background: true
+                parallel: true
+            - circle-android wait-for-boot      
     
     
-test:
-    pre:
-    - emulator -avd circleci-android22 -no-audio -no-window:
-        background: true
-        parallel: true
-    - circle-android wait-for-boot
-  override:
-     - cat nohup.out
-     - adb devices
+    test:
+      override:
+         - adb devices
