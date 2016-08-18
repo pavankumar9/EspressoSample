@@ -15,8 +15,11 @@ machine:
     
     
 test:
+    pre:
+    - emulator -avd circleci-android22 -no-audio -no-window:
+        background: true
+        parallel: true
+    - circle-android wait-for-boot
   override:
-     - node -v
-     - npm -v
-     - appium --version    
      - cat nohup.out
+     - adb devices
