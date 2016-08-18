@@ -22,4 +22,4 @@ test:
   override:
      - node -v
      - npm -v
-     - appium --version       
+     - adb devices      
