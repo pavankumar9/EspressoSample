@@ -9,3 +9,4 @@ test:
   override:
      - node -v
      - npm -v
+     - npm install -g appium@1.4.13
