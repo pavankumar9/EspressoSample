@@ -16,7 +16,7 @@ test:
       - /home/ubuntu/.linuxbrew/bin/brew update
       - /home/ubuntu/.linuxbrew/bin/brew update
       - /home/ubuntu/.linuxbrew/bin/brew config
-      #/home/ubuntu/.linuxbrew/bin/brew doctor
+      - /home/ubuntu/.linuxbrew/bin/brew update node
       - /home/ubuntu/.linuxbrew/bin/brew install -v node
       - /home/ubuntu/.linuxbrew/bin/brew link node
       - sudo apt-get remove nodejs
