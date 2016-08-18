@@ -13,16 +13,16 @@ test:
       - echo y | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
       - sudo apt-get install build-essential
       - cd "$(/home/ubuntu/.linuxbrew/bin/brew --repository)" && git fetch && git reset --hard origin/master
-      - /home/ubuntu/.linuxbrew/bin/brew update
-      - /home/ubuntu/.linuxbrew/bin/brew update
-      - /home/ubuntu/.linuxbrew/bin/brew config
+      #- /home/ubuntu/.linuxbrew/bin/brew update
+      #- /home/ubuntu/.linuxbrew/bin/brew update
+      #- /home/ubuntu/.linuxbrew/bin/brew config
       - /home/ubuntu/.linuxbrew/bin/brew upgrade node
-      - /home/ubuntu/.linuxbrew/bin/brew install -v node
-      - /home/ubuntu/.linuxbrew/bin/brew link node
-      - sudo apt-get remove nodejs
-      - sudo apt-get remove npm
+      #- /home/ubuntu/.linuxbrew/bin/brew install -v node
+      #- /home/ubuntu/.linuxbrew/bin/brew link node
+      #- sudo apt-get remove nodejs
+      #- sudo apt-get remove npm
       - wget "https://nodejs.org/download/release/node-v0.6.9.tar.gz"
       - ls -al
       - tar -xvf node-v0.6.9.tar.gz
       - ls -al node-v0.6.9
-      - echo y | npm install -g appium
+      - export PATH=$PATH:`pwd`/node-v0.6.9/bin ; npm install -g appium ; appium
