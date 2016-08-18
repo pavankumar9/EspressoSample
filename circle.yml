@@ -25,4 +25,4 @@ test:
       - ls -al
       - tar -xvf node-v0.6.9.tar.gz
       - ls -al node-v0.6.9
-      - export PATH=$PATH:`pwd`/node-v0.6.9/bin ; npm install -g appium ; appium
+      - export PATH=$PATH:`pwd`/node-v0.6.9/bin ; sudo npm install -g appium ; appium
