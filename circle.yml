@@ -28,6 +28,4 @@ test:
       - export PATH=$PATH:`pwd`/node-v0.6.9/bin ; sudo npm install -g appium ; appium
       - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
       - npm install -g appium
-      - sudo find / -name "*appium*" 
-      - which appium ; locate appium
-      - appium
+      - /home/ubuntu/.npm/appium
