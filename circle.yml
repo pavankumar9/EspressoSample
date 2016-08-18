@@ -12,6 +12,3 @@ machine:
             - npm install -g appium@1.4.13
             - appium:
                   background: true
-    test:
-      override:
-         - adb devices
