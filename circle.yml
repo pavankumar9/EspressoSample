@@ -14,8 +14,4 @@ machine:
                   background: true
     test:
       override:
-         - emulator -avd circleci-android22 -no-audio -no-window:
-                        background: true
-                        parallel: true
-         - circle-android wait-for-boot  
          - adb devices
