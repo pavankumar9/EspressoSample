@@ -24,5 +24,4 @@ test:
      - node -v
      - npm -v
      #- adb devices
-     - git clone https://2497f227745b8926986a9d573f55e420a3a173d3@github.com/goibibo/goibibo-automation.git
      - ls -al
