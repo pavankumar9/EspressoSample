@@ -10,11 +10,19 @@ import javax.mail.internet.MimeMessage;
 public class SendMailSSL {
 	public static void main(String[] args) {
 		Properties props = new Properties();
-		props.setProperty("mail.transport.protocol", "smtp");     
-   	props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.starttls.enable", "true");
-		props.put("mail.smtp.host", "smtp.gmail.com");
-		props.put("mail.smtp.port", "25");
+	
+		props.put("mail.smtp.user","username"); 
+		props.put("mail.smtp.host", "smtp.gmail.com"); 
+		props.put("mail.smtp.port", "25"); 
+		props.put("mail.debug", "true"); 
+		props.put("mail.smtp.auth", "true"); 
+		props.put("mail.smtp.starttls.enable","true"); 
+		props.put("mail.smtp.EnableSSL.enable","true");
+		
+		props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");   
+		props.setProperty("mail.smtp.socketFactory.fallback", "false");   
+		props.setProperty("mail.smtp.port", "465");   
+		props.setProperty("mail.smtp.socketFactory.port", "465"); 
 
 		Session session = Session.getDefaultInstance(props,
 			new javax.mail.Authenticator() {
@@ -34,10 +42,8 @@ public class SendMailSSL {
 			message.setText("Dear Mail Crawler," +
 					"\n\n No spam to my email, please!");
 
-			//Transport.send(message);
-			Transport transport = session.getTransport("smtps");
-			transport.send(message);
-
+			Transport.send(message);
+		
 			System.out.println("Done");
 
 		} catch (MessagingException e) {
