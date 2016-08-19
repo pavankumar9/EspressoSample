@@ -18,6 +18,7 @@ machine:
     #- circle-android wait-for-boot  
     - android list targets
     - emulator -list-avds
+    - android list device
     #- ls -al
     
     
