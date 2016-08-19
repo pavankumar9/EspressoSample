@@ -16,7 +16,7 @@ public class SendMailSSL {
 		props.put("mail.smtp.port", "25"); 
 		props.put("mail.debug", "true"); 
 		props.put("mail.smtp.auth", "true"); 
-		props.put("mail.smtp.starttls.enable","true"); 
+		props.put("mail.smtp.starttls.enable","false"); 
 		props.put("mail.smtp.EnableSSL.enable","true");
 		
 		props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");   
