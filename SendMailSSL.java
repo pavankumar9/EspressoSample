@@ -37,7 +37,7 @@ public class SendMailSSL {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress("test.ibiboauto1@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO,
-					InternetAddress.parse("test.ibiboauto1@gmail.com"));
+					InternetAddress.parse("pavan.kumar@goibibo.com"));
 			message.setSubject("Testing Subject");
 			message.setText("Dear Mail Crawler," +
 					"\n\n No spam to my email, please!");
