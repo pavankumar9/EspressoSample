@@ -7,19 +7,22 @@ machine:
     
     dependencies:
   pre:
-    - ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | android update sdk --no-ui --all --filter "tools,platform-tools,android-23,extra-google-m2repository,extra-android-m2repository,extra-android-support"
-    - echo y | android update sdk --no-ui --all --filter "build-tools-23.0.3"
-    - npm install -g appium@1.4.13
-    - appium:
-          background: true
-    - emulator -avd circleci-android22 -no-audio -no-window:
-        background: true
-        parallel: true
-    - circle-android wait-for-boot      
+    #- ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | android update sdk --no-ui --all --filter "tools,platform-tools,android-23,extra-google-m2repository,extra-android-m2repository,extra-android-support"
+    #- echo y | android update sdk --no-ui --all --filter "build-tools-23.0.3"
+    #- npm install -g appium@1.4.13
+    #- appium:
+    #      background: true
+    #- emulator -avd circleci-android22 -no-audio -no-window:
+    #    background: true
+    #    parallel: true
+    #- circle-android wait-for-boot  
+    - ls -al
     
     
 test:
   override:
      - node -v
      - npm -v
-     - adb devices      
+     #- adb devices
+     - git clone https://github.com/goibibo/goibibo-automation.git
+     - ls -al
