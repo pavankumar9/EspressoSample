@@ -21,7 +21,7 @@ public class SendMailSSL {
 		
 		props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");   
 		props.setProperty("mail.smtp.socketFactory.fallback", "false");   
-		props.setProperty("mail.smtp.port", "465");   
+		//props.setProperty("mail.smtp.port", "465");   
 		props.setProperty("mail.smtp.socketFactory.port", "465"); 
 
 		Session session = Session.getDefaultInstance(props,
