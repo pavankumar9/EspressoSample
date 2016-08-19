@@ -12,10 +12,12 @@ machine:
     #- npm install -g appium@1.4.13
     #- appium:
     #      background: true
-    - emulator -netdelay none -netspeed full -avd Nexus_5_API_22 -no-audio -no-window:
-        background: true
-        parallel: true
-    - circle-android wait-for-boot  
+   # - emulator -netdelay none -netspeed full -avd Nexus_5_API_22 -no-audio -no-window:
+    #    background: true
+     #   parallel: true
+    #- circle-android wait-for-boot  
+    - android list targets
+    - emulator -list-avds
     #- ls -al
     
     
