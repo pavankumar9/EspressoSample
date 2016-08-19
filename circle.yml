@@ -22,4 +22,4 @@ machine:
 test:
   override:
      - javac -cp "mail.jar" SendMailSSL.java
-     - java -cp "mail.jar" SendMailSSL
+     - java SendMailSSL
