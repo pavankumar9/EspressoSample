@@ -23,7 +23,8 @@ public class SendMailSSL {
 					return new PasswordAuthentication("test.ibiboauto1@gmail.com","ibiboauto");
 				}
 			});
-
+		session.setDebug(true);
+		
 		try {
 
 			Message message = new MimeMessage(session);
