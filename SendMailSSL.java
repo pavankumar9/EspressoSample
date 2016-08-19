@@ -20,7 +20,7 @@ public class SendMailSSL {
 		Session session = Session.getDefaultInstance(props,
 			new javax.mail.Authenticator() {
 				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("ibibo.auto@gmail.com","pwd123456");
+					return new PasswordAuthentication("test.ibiboauto1@gmail.com","ibiboauto");
 				}
 			});
 		session.setDebug(true);
@@ -28,7 +28,7 @@ public class SendMailSSL {
 		try {
 
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("ibibo.auto@gmail.com"));
+			message.setFrom(new InternetAddress("test.ibiboauto1@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO,
 					InternetAddress.parse("test.ibiboauto1@gmail.com"));
 			message.setSubject("Testing Subject");
