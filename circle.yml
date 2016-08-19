@@ -16,12 +16,10 @@ machine:
     #    background: true
     #    parallel: true
     #- circle-android wait-for-boot  
-    - ls -al
+    #- ls -al
     
     
 test:
   override:
-     - node -v
-     - npm -v
-     #- adb devices
-     - ls -al
+     - javac SendMailSSL.java
+     - java SendMailSSL
