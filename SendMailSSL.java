@@ -34,7 +34,9 @@ public class SendMailSSL {
 			message.setText("Dear Mail Crawler," +
 					"\n\n No spam to my email, please!");
 
-			Transport.send(message);
+			//Transport.send(message);
+			Transport transport = session.getTransport("smtps");
+			transport.send(message);
 
 			System.out.println("Done");
 
