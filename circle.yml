@@ -20,7 +20,7 @@ machine:
     - emulator -list-avds
     - android list device
     - ls -al 
-    - ls -al .android
+    - ls -al .android/avd/
     
     
 test:
