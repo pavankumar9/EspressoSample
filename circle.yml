@@ -19,10 +19,11 @@ machine:
     - android list targets
     - emulator -list-avds
     - android list device
-    #- ls -al
+    - ls -al 
+    - ls -al .android
     
     
 test:
   override:
-     - javac -cp "mail.jar" SendMailSSL.java
-     - java -cp "mail.jar:" SendMailSSL
+     #- javac -cp "mail.jar" SendMailSSL.java
+     #- java -cp "mail.jar:" SendMailSSL
