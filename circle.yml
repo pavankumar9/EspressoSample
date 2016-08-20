@@ -23,7 +23,7 @@ machine:
     - ls -al .android/avd/
     - cat .android/avd/circleci-android22.ini
     - ls -al .android/avd/circleci-android22.avd
-    - cat .android/avd/circleci-android22.avd/hardware-qemu.ini
+    - cat .android/avd/circleci-android22.avd/config.ini
     
     
 test:
