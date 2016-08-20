@@ -21,6 +21,7 @@ machine:
     - android list device
     - ls -al 
     - ls -al .android/avd/
+    - cat .android/avd/circleci-android22.ini
     
     
 test:
